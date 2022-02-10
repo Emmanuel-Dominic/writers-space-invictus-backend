@@ -410,4 +410,4 @@ No additional parameters required
 
 # Test Driven Blog Developing Using Python/Django
 
-[![Build Status]((https://app.travis-ci.com/Emmanuel-Dominic/writers-space-invictus-backend.svg?branch=develop)](https://travis-ci.com/Emmanuel-Dominic/writers-space-invictus-backend)
+[![Build Status](https://app.travis-ci.com/Emmanuel-Dominic/writers-space-invictus-backend.svg?branch=develop)](https://app.travis-ci.com/Emmanuel-Dominic/writers-space-invictus-backend)
