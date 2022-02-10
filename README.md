@@ -407,3 +407,7 @@ No additional parameters required
 ### Get Tags
 
 `GET /api/tags`
+
+# Test Driven Blog Developing Using Python/Django
+
+[![Build Status]((https://app.travis-ci.com/Emmanuel-Dominic/writers-space-invictus-backend.svg?branch=develop)](https://travis-ci.com/Emmanuel-Dominic/writers-space-invictus-backend)
