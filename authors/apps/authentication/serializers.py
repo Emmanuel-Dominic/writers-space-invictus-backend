@@ -15,7 +15,8 @@ class RegistrationSerializer(serializers.ModelSerializer):
         min_length=8,
         write_only=True
     )
-
+    auth_token = serializers.CharField(max_length=255, read_only=True)
+    
     # The client should not be able to send a token along with a registration
     # request. Making `token` read-only handles that for us.
 
@@ -23,7 +24,7 @@ class RegistrationSerializer(serializers.ModelSerializer):
         model = User
         # List all of the fields that could possibly be included in a request
         # or response, including fields specified explicitly above.
-        fields = ['email', 'username', 'password']
+        fields = ['email', 'username', 'password', 'auth_token']
 
     def create(self, validated_data):
         # Use the `create_user` method we wrote earlier to create a new user.
@@ -34,6 +35,7 @@ class LoginSerializer(serializers.Serializer):
     email = serializers.CharField(max_length=255)
     username = serializers.CharField(max_length=255, read_only=True)
     password = serializers.CharField(max_length=128, write_only=True)
+    auth_token = serializers.CharField(max_length=225, read_only=True)
 
 
     def validate(self, data):
@@ -87,6 +89,7 @@ class LoginSerializer(serializers.Serializer):
         return {
             'email': user.email,
             'username': user.username,
+            'auth_token': user.auth_token,
 
         }
 
@@ -106,7 +109,9 @@ class UserSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = User
-        fields = ('email', 'username', 'password')
+        fields = ('email', 'username', 'password', 'auth_token')
+        
+        read_only_fields = ('auth_token',)
 
         # The `read_only_fields` option is an alternative for explicitly
         # specifying the field with `read_only=True` like we did for password

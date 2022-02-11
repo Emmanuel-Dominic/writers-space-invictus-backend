@@ -3,6 +3,7 @@ import jwt
 from datetime import datetime, timedelta
 
 from django.conf import settings
+from django.conf import settings
 from django.contrib.auth.models import (
     AbstractBaseUser, BaseUserManager, PermissionsMixin
 )
@@ -116,3 +117,10 @@ class User(AbstractBaseUser, PermissionsMixin):
         the user's real name, we return their username instead.
         """
         return self.username
+
+    def auth_token(self):
+        self.encoded_jwt = jwt.encode(
+            {'username': self.username,
+             'exp': datetime.now() + timedelta(hours=24)},
+           settings.SECRET_KEY, algorithm='HS256').decode('utf-8')
+        return self.encoded_jwt
