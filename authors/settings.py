@@ -11,15 +11,16 @@ https://docs.djangoproject.com/en/1.11/ref/settings/
 """
 
 import os
+from dotenv import load_dotenv
 
+load_dotenv()
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.11/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '5ne9v2=-r7a=k(&nt0(!l78nld5!ik&tdttn4i-6^-cw-!a%+('
+SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -100,9 +101,15 @@ WSGI_APPLICATION = 'authors.wsgi.application'
 # https://docs.djangoproject.com/en/1.11/ref/settings/#databases
 
 DATABASES = {
+
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+    
+        "ENGINE": "django.db.backends.postgresql",
+        "NAME" : os.environ.get('NAME'),
+        "USER" : os.environ.get('USER'),
+        "PASSWORD" : os.environ.get('PASSWORD'),
+        "HOST" : os.environ.get('HOST'),
+        "PORT" : os.environ.get('PORT')
     }
 }
 
