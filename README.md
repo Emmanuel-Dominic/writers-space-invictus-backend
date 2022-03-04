@@ -1,5 +1,7 @@
 # writers-space-invictus-backend - A Social platform for the creative at heart
 
+[![CircleCI](https://circleci.com/gh/Emmanuel-Dominic/writers-space-invictus-backend/tree/develop.svg?style=svg)](https://circleci.com/gh/Emmanuel-Dominic/writers-space-invictus-backend/tree/develop)
+
 This is a project system that enables authors to write articles that are to reach a massive audience. In the case of article writing, different authors can comment, share, bookmark, like and follow the publisher of the article.
 
 ## Vision
