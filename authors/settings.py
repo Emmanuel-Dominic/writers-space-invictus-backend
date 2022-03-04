@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     # 'corsheaders',
     'django_extensions',
     'rest_framework',
+    'drf_yasg',
 
     'authentication.apps.AuthenticationConfig',
     'core.apps.CoreConfig',
