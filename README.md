@@ -1,6 +1,7 @@
 # writers-space-invictus-backend - A Social platform for the creative at heart
 
-[![CircleCI](https://circleci.com/gh/Emmanuel-Dominic/writers-space-invictus-backend/tree/develop.svg?style=svg)](https://circleci.com/gh/Emmanuel-Dominic/writers-space-invictus-backend/tree/develop)
+[![CircleCI](https://circleci.com/gh/Emmanuel-Dominic/writers-space-invictus-backend/tree/develop.svg?style=svg)](https://circleci.com/gh/Emmanuel-Dominic/writers-space-invictus-backend/tree/develop) [![Coverage Status](https://coveralls.io/repos/github/Emmanuel-Dominic/writers-space-invictus-backend/badge.svg?branch=ch-add-coveralls-code-coverage-181151224)](https://coveralls.io/github/Emmanuel-Dominic/writers-space-invictus-backend?branch=ch-add-coveralls-code-coverage-181151224)
+[![Codacy Badge](https://app.codacy.com/project/badge/Grade/5cde24fd52344960ad0b7d951ca8ccb1)](https://www.codacy.com/gh/Emmanuel-Dominic/writers-space-invictus-backend/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=Emmanuel-Dominic/writers-space-invictus-backend&amp;utm_campaign=Badge_Grade)
 
 This is a project system that enables authors to write articles that are to reach a massive audience. In the case of article writing, different authors can comment, share, bookmark, like and follow the publisher of the article.
 
